@@ -15,8 +15,8 @@
             let newMessage = JSON.parse(event.data);
             if(newMessage.action === "newMessage"){
                 message.value.push(newMessage.message);
-            }
-            message.value.push(newMessage.message);
+            } 
+            message.value.push(newMessage.message); //
         }
     })
 
