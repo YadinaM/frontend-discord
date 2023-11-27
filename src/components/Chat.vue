@@ -13,8 +13,8 @@
 
         socket.onmessage = (event) => {
             let newMessage = JSON.parse(event.data);
-            if(newMessage.data.action === "newMessage"){
-                messages.value.push(newMessage.data.message);
+            if(newMessage.action === "newMessage"){
+                messages.value.push(newMessage.message);
             } 
             //message.value.push(newMessage.message); //
         }
