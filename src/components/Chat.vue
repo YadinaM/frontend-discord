@@ -11,7 +11,7 @@
         //socket = new WebSocket('ws://localhost:3000/primus'); om lokaal te testen
         socket = new WebSocket('wss://backend-discord.onrender.com/primus');
 
-        socket.onmessage = () => {
+        socket.onmessage = (event) => {
             let newMessage = JSON.parse(event.data);
             if(newMessage.data.action === "newMessage"){
                 message.value.push(newMessage.data.message);
